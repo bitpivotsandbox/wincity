@@ -1,0 +1,13 @@
+{
+  "name": "devbadges",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": "8.9.0"
+  },
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -af client/dist/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  }
+}

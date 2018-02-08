@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": ["jest"],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack/common.js"
+      }
+    }
+  },
+  "rules": {
+    "brace-style": ["error", "stroustrup", { "allowSingleLine": true }],
+    "no-underscore-dangle": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to", "hrefLeft", "hrefRight" ],
+      "aspects": [ "noHref", "invalidHref", "preferButton" ]
+    }]
+  }
+}
